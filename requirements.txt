@@ -1,0 +1,7 @@
+# Core data exploration
+quickdraw
+numpy
+matplotlib
+
+# Model training
+torch

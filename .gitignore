@@ -10,4 +10,7 @@ __pycache__/
 
 # Data/cache
 data/
+.quickdrawcache/
+.ipynb_checkpoints/
+
 
