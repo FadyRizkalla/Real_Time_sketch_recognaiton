@@ -5,7 +5,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, random_split
 
-from config import BATCH_SIZE, CATEGORIES, EPOCHS, LEARNING_RATE
+from config import BATCH_SIZE, CATEGORIES, EPOCHS, LEARNING_RATE, SAMPLES_PER_CLASS
 from src.data.dataset import QuickDrawBitmapDataset
 from src.models.cnn import SketchCNN
 from src.training.evaluate import evaluate
@@ -13,7 +13,7 @@ from src.training.train import train
 
 
 def main() -> None:
-    dataset = QuickDrawBitmapDataset(categories=CATEGORIES, samples_per_class=200)
+    dataset = QuickDrawBitmapDataset(categories=CATEGORIES, samples_per_class=SAMPLES_PER_CLASS)
     if len(dataset) == 0:
         print("Dataset is empty. Check internet connection and category names.")
         return
